@@ -10,7 +10,7 @@ interface FilterCategoriesProps {
 const FilterCategories: React.FC<FilterCategoriesProps> = ({ category, setCategory, questions }) => {
   const uniqueCategories = Array.from(new Set(
     questions
-      .flatMap((q) => q.categories.split(',').map(cat => cat.trim()))  // Split by comma and trim whitespace
+      .flatMap((q) => q.categories.split(',').map(cat => cat.trim()))
   ));
   return (
     <select
